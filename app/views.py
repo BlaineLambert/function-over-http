@@ -3,10 +3,10 @@ from django.http.response import HttpResponse
 from django.http.request import HttpRequest
 # Create your views here.
 
-def hello_view(request: HttpRequest, name: HttpRequest) -> HttpRequest:
+def hello_view(request: HttpRequest, name: HttpRequest) -> HttpResponse:
     return HttpResponse(f"Hey, {name}!")
 
-def how_old(request: HttpRequest, year: HttpRequest, birthyear: HttpRequest) -> HttpRequest:
+def how_old(request: HttpRequest, year: HttpRequest, birthyear: HttpRequest) -> HttpResponse:
     return HttpResponse(f"{year - birthyear}")
 
 def order(request: HttpRequest, burber: HttpRequest, fries: HttpRequest, drink: HttpRequest) -> HttpResponse:
